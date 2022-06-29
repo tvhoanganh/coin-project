@@ -1,3 +1,4 @@
+import ButtonCustom from '@component/Button'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
+            <ButtonCustom></ButtonCustom>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
