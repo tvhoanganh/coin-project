@@ -1,5 +1,5 @@
 import axios from "axios";
-import getDomain from '@utils/get-domain'
+import getDomain from '@utils/get-domain.utils'
 const http = axios.create({
   baseURL: getDomain(),
   headers: {
