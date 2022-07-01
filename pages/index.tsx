@@ -6,7 +6,7 @@ import type {
 } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
+import { ReactElement, useEffect } from "react";
 import http from "@utils/http-client.utils";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
@@ -14,6 +14,8 @@ import httpServer from "@utils/http-server.utils";
 import { Coin } from "model/coin.model";
 import { Stats } from "model/stats.model";
 import CoinsList from "features/home-page/coin-list";
+import { Table, useAsyncList, useCollator } from "@nextui-org/react";
+import BaseLayout from "layout/base-layout";
 interface Response {
   data: {
     stats: Stats;
@@ -29,5 +31,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: { data: res },
   };
+};
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <BaseLayout>{page}</BaseLayout>;
 };
 export default Home;
