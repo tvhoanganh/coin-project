@@ -23,8 +23,7 @@ COPY --from=builder /app .
 EXPOSE 3000
 CMD ["node_modules/.bin/next", "start"]
 
-FROM node:lts-alpine as develop
+FROM node:lts-alpine as development
 WORKDIR /app
-COPY --from=dependencies /app .
 EXPOSE 3000
 CMD ["yarn", "dev"]

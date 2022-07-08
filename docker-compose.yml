@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   coinproject:
+    container_name: webapp-coin
     image: coinproject
     build:
       context: .

@@ -3,9 +3,8 @@ version: '3.4'
 services:
   coinproject:
     build:
-      target: develop
+      target: development
     volumes:
       - ./:/app
-      - /app/node_modules
     ports:
       - 3000:3000
